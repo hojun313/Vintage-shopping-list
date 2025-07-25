@@ -14,6 +14,7 @@ const renderItems = () => {
             <div>
                 <span>현재:　</span>
                 <button class="toggle-button" data-index="${index}">${item.has ? '있음' : '없음'}</button>
+                <button class="delete-button" data-index="${index}">X</button>
             </div>
         `;
         itemList.appendChild(li);
@@ -36,6 +37,12 @@ const toggleItem = (index) => {
     saveItems();
 };
 
+const deleteItem = (index) => {
+    items.splice(index, 1);
+    renderItems();
+    saveItems();
+};
+
 const saveItems = () => {
     localStorage.setItem('shoppingListItems', JSON.stringify(items));
 };
@@ -54,6 +61,9 @@ itemList.addEventListener('click', (event) => {
     if (event.target.classList.contains('toggle-button')) {
         const index = event.target.dataset.index;
         toggleItem(index);
+    } else if (event.target.classList.contains('delete-button')) {
+        const index = event.target.dataset.index;
+        deleteItem(index);
     }
 });
 
