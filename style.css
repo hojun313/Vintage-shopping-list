@@ -33,6 +33,7 @@ header h1 {
     align-items: center;
     background-color: #fff;
     padding: 15px;
+    padding-right: 5px;
     margin-bottom: 15px;
     border-radius: 3px;
     font-size: 1.1rem;

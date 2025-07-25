@@ -12,7 +12,7 @@ const renderItems = () => {
         li.innerHTML = `
             <span>${item.name}</span>
             <div>
-                <span>현재:　</span>
+                <span>현재:</span>
                 <button class="toggle-button" data-index="${index}">${item.has ? '있음' : '없음'}</button>
                 <button class="delete-button" data-index="${index}">X</button>
             </div>
