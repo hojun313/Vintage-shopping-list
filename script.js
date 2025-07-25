@@ -51,8 +51,17 @@ const loadItems = () => {
     const savedItems = localStorage.getItem('shoppingListItems');
     if (savedItems) {
         items = JSON.parse(savedItems);
-        renderItems();
+    } else {
+        // 기본 항목 설정
+        items = [
+            { name: '우유', has: true },
+            { name: '계란', has: true },
+            { name: '휴지', has: false },
+            { name: '샴푸', has: false }
+        ];
+        saveItems(); // 기본 항목 저장
     }
+    renderItems();
 };
 
 addItemButton.addEventListener('click', addItem);
