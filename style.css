@@ -34,8 +34,19 @@ header {
 }
 
 .item.no span {
-    text-decoration: line-through;
-    color: #aaa;
+    color: #333; /* 검은색 */
+}
+
+.item span {
+    color: #aaa; /* 회색 */
+}
+
+.item.no .toggle-button {
+    background-color: #ffdddd; /* 파스텔톤 빨간색 */
+}
+
+.item .toggle-button {
+    background-color: #ddffdd; /* 파스텔톤 초록색 */
 }
 
 .toggle-button {
