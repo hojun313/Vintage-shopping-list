@@ -1,15 +1,22 @@
-body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    -webkit-tap-highlight-color: transparent; /* 모바일 터치 시 하이라이트 제거 */
+@font-face {
+    font-family: 'Diphylleia';
+    src: url('./기타 자료/Diphylleia/Diphylleia-Regular.ttf') format('truetype');
 }
 
-header {
+body {
+    font-family: 'Diphylleia', serif;
+    background-color: #f5f1e8; /* 오래된 종이 느낌의 배경색 */
+    color: #4a4a4a;
+    margin: 0;
+    padding: 20px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+header h1 {
+    color: #8a6d3b; /* 브론즈 색상 */
     text-align: center;
     margin-bottom: 20px;
+    font-weight: normal;
 }
 
 #item-list {
@@ -26,37 +33,44 @@ header {
     align-items: center;
     background-color: #fff;
     padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+    margin-bottom: 15px;
+    border-radius: 3px;
     font-size: 1.1rem;
-    width: 48%; /* 두 줄로 나열하기 위해 너비 지정 */
-    box-sizing: border-box; /* 패딩을 너비에 포함 */
+    width: 48%;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .item.no span {
-    color: #333; /* 검은색 */
+    color: #333;
 }
 
 .item span {
-    color: #aaa; /* 회색 */
+    color: #888;
 }
 
 .item.no .toggle-button {
-    background-color: #ffdddd; /* 파스텔톤 빨간색 */
+    background-color: #e57373; /* 톤 다운된 빨간색 */
+    color: #fff;
+    border-color: #e57373;
 }
 
 .item .toggle-button {
-    background-color: #ddffdd; /* 파스텔톤 초록색 */
+    background-color: #81c784; /* 톤 다운된 초록색 */
+    color: #fff;
+    border-color: #81c784;
 }
 
 .toggle-button {
     cursor: pointer;
     padding: 8px 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1rem;
-    min-width: 60px; /* 버튼 최소 너비 지정 */
+    min-width: 60px;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 .add-item-container {
@@ -68,16 +82,16 @@ header {
     flex-grow: 1;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 3px;
     font-size: 1rem;
 }
 
 #add-item-button {
     padding: 12px 18px;
-    background-color: #333;
+    background-color: #8a6d3b; /* 브론즈 색상 */
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
     font-size: 1rem;
 }
@@ -89,7 +103,7 @@ header {
     }
 
     .item {
-        width: 100%; /* 좁은 화면에서는 한 줄로 표시 */
+        width: 100%;
         padding: 12px;
         font-size: 1rem;
     }
