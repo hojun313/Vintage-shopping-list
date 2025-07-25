@@ -11,7 +11,10 @@ const renderItems = () => {
         li.className = `item ${item.has ? '' : 'no'}`;
         li.innerHTML = `
             <span>${item.name}</span>
-            <button class="toggle-button" data-index="${index}">${item.has ? '있음' : '없음'}</button>
+            <div>
+                <span>현재:　</span>
+                <button class="toggle-button" data-index="${index}">${item.has ? '있음' : '없음'}</button>
+            </div>
         `;
         itemList.appendChild(li);
     });
