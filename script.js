@@ -105,5 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Preset functionality
+    const presetMainButton = document.getElementById('preset-main-button');
+    const presetOptions = document.getElementById('preset-options');
+
+    presetMainButton.addEventListener('click', () => {
+        presetOptions.style.display = presetOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close preset options if clicking outside
+    window.addEventListener('click', (event) => {
+        if (!presetMainButton.contains(event.target) && !presetOptions.contains(event.target)) {
+            presetOptions.style.display = 'none';
+        }
+    });
+
     loadItems();
 });
