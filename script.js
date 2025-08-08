@@ -58,7 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 { name: '우유', has: true },
                 { name: '계란', has: true },
                 { name: '휴지', has: false },
-                { name: '샴푸', has: false }
+                { name: '샴푸 & 바디워시', has: true },
+                { name: '폼클렌징', has: true },
+                { name: '키친타올', has: true },
+                { name: '주방 세제', has: true },
+                { name: '수세미', has: true },
+                { name: '쓰레기봉투', has: true },
+                { name: '생수', has: true },
+                { name: '세탁 세제', has: true },
+                { name: '건전지', has: true }
             ];
             saveItems(); // 기본 항목 저장
         }
