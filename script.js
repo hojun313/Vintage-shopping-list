@@ -109,13 +109,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const presetMainButton = document.getElementById('preset-main-button');
     const presetOptions = document.getElementById('preset-options');
 
-    presetMainButton.addEventListener('click', () => {
+    const presets = {
+        'default': ['우유', '계란', '휴지', '샴푸 & 바디워시', '폼클렌징', '키친타올', '주방 세제', '수세미', '쓰레기봉투', '생수', '세탁 세제', '건전지'],
+        'living-alone': ['즉석밥', '라면', '파스타면', '3분 카레', '물티슈', '쓰레기 봉투'],
+        'cooking': ['양파', '대파', '마늘', '계란', '우유', '케첩', '마요네즈', '파스타면'],
+        'pets': ['사료', '간식', '배변패드/모래', '배변 봉투', '전용 샴푸']
+    };
+
+    const applyPreset = (presetName) => {
+        const presetItems = presets[presetName];
+        if (!presetItems) return;
+
+        items = presetItems.map(name => ({ name, has: false }));
+        renderItems();
+        saveItems();
+        presetOptions.style.display = 'none';
+    };
+
+    presetMainButton.addEventListener('click', (event) => {
+        event.stopPropagation();
         presetOptions.style.display = presetOptions.style.display === 'block' ? 'none' : 'block';
+    });
+
+    presetOptions.addEventListener('click', (event) => {
+        if (event.target.classList.contains('preset-option-button')) {
+            const presetName = event.target.dataset.preset;
+            applyPreset(presetName);
+        }
     });
 
     // Close preset options if clicking outside
     window.addEventListener('click', (event) => {
-        if (!presetMainButton.contains(event.target) && !presetOptions.contains(event.target)) {
+        if (event.target !== presetMainButton) {
             presetOptions.style.display = 'none';
         }
     });
