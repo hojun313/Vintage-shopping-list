@@ -1,4 +1,12 @@
-# 있고 없고 (Itgo Eopgo)
+# 있고 없고 (Itgo Eopgo) - Vintage Shopping List
+
+![있고 없고 (Itgo Eopgo)](ITGO EOPGO.png)
+
+## 🔗 서비스 바로가기
+
+[있고 없고 (Itgo Eopgo) 서비스](https://hojun313.github.io/Vintage-shopping-list/)
+
+## 📝 프로젝트 소개
 
 **일상의 필수품, 더 이상 잊지 마세요.**
 
@@ -25,3 +33,25 @@
 4.  **리셋:** 장바구니에 담은 물건은 다시 '있고'로 변경하면 끝!
 
 **'있고 없고'는 당신의 스마트한 소비 생활을 응원합니다.**
+
+## 🛠️ 기술 스택
+
+*   HTML5
+*   CSS3
+*   JavaScript (ES6+)
+
+## 🚀 시작하기
+
+1.  이 저장소를 클론합니다:
+    ```bash
+    git clone https://github.com/hojun313/Vintage-shopping-list.git
+    ```
+2.  클론된 디렉토리로 이동합니다:
+    ```bash
+    cd Vintage-shopping-list
+    ```
+3.  `index.html` 파일을 웹 브라우저에서 엽니다.
+
+## 📄 라이선스
+
+이 프로젝트는 MIT 라이선스에 따라 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하십시오.
